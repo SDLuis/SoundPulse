@@ -1,11 +1,12 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import data from '../data/music'
 
 export default function UseSongHandler () {
   const audioRef = useRef(null)
+  const [artists, setArtists] = useState(data())
   const [index, setIndex] = useState(0)
-  const [artist, setArtist] = useState(data()[index])
-  const [songs, setSongs] = useState(artist.audio)
+  const [singleArtist, setSingleArtist] = useState(artists[0])
+  const [songs, setSongs] = useState(artists[index].audio)
   const [currentSong, setCurrentSong] = useState(songs[0])
   const [isPlaying, setIsPlaying] = useState(false)
   const [songInfo, setSongInfo] = useState({
@@ -14,6 +15,11 @@ export default function UseSongHandler () {
     animationPercentage: 0
   })
   const [libraryStatus, setLibraryStatus] = useState(false)
+
+  useEffect(() => {
+    setSongs(artists[index].audio)
+    setCurrentSong(artists[index].audio[0])
+  }, [index])
 
   const timeUpdateHandler = (e) => {
     const currentTime = e.target.currentTime
@@ -58,5 +64,5 @@ export default function UseSongHandler () {
     })
   }
 
-  return { songEndHandler, songs, setSongs, setIndex, activeLibraryHandler, artist, timeUpdateHandler, libraryStatus, setArtist, setLibraryStatus, setIsPlaying, currentSong, isPlaying, songInfo, setSongInfo, audioRef, setCurrentSong }
+  return { songEndHandler, artists, setArtists, setIndex, songs, setSongs, activeLibraryHandler, singleArtist, timeUpdateHandler, libraryStatus, setSingleArtist, setLibraryStatus, setIsPlaying, currentSong, isPlaying, songInfo, setSongInfo, audioRef, setCurrentSong }
 }

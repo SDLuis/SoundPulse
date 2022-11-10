@@ -1,5 +1,5 @@
 import Rihanna from '../img/rihanna.jpg'
-import Kendirck from '../img/Kendirck Lamar.webp'
+import Kendrick from '../img/Kendirck Lamar.webp'
 import TheWeeknd from '../img/The weeknd.jpg'
 import Lana from '../img/Lana del rey.jpg'
 import Schoolboyq from '../img/schoolboy q.jpg'
@@ -26,29 +26,28 @@ function chillHop () {
       active: false
     },
     {
-      cover: Kendirck,
-      artist: 'Kendirck Lamar',
+      cover: Kendrick,
+      artist: 'Kendrick Lamar',
       audio: [
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false }
+        { id: v4(), name: 'N95', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2022/06/Kendrick-Lamar-N95-via-Naijafinix.com_.mp3?_=1', active: false },
+        { id: v4(), name: 'All The Stars Ft SZA', song: 'https://naijafinix.com/wp-content/uploads/2021/05/Kendrick-Lamar-SZA-All-The-Stars-via-Naijafinix.com_.mp3?_=1', active: false },
+        { id: v4(), name: 'Black Panther', song: 'https://naijafinix.com/wp-content/uploads/2021/11/Black-Panther-via-Naijafinix.com_.mp3?_=1', active: false },
+        { id: v4(), name: 'Humble', song: 'https://naijafinix.com/wp-content/uploads/2021/04/Kendrick-Lamar-Humble-via-Naijafinix.com_.mp3?_=1', active: false },
+        { id: v4(), name: 'Bitch, Don’t Kill My Vibe', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2021/05/Kendrick-Lamar-Bitch-Dont-Kill-My-Vibe-via-Naijafinix.com_.mp3?_=1', active: false }
       ],
       color: '#801319',
       id: v4(),
       active: false
     },
     {
-      name: 'Making a Way',
       cover: Rihanna,
       artist: 'Rihanna',
       audio: [
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false }
+        { id: v4(), name: 'Good Girl Gone Bad', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2021/08/Rihanna-Good-Girl-Gone-Bad-via-Naijafinix.com_.mp3?_=1', active: false },
+        { id: v4(), name: 'Diamonds', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2020/08/Rihanna-Diamonds-via-Naijafinix.com_.mp3?_=1', active: false },
+        { id: v4(), name: 'SOS', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2020/08/Rihanna-SOS-via-Naijafinix.com_.mp3?_=1', active: false },
+        { id: v4(), name: 'Lift Me Up', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2022/11/Rihanna-Lift-Me-Up-From-Black-Panther-Wakanda-Forever-via-Naijafinix.com_.mp3?_=1', active: false },
+        { id: v4(), name: 'Man Down', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2020/08/Rihanna-Man-Down-via-Naijafinix.com_.mp3?_=1', active: false }
       ],
       color: '#6f4878',
       id: v4(),
@@ -58,11 +57,11 @@ function chillHop () {
       cover: TheWeeknd,
       artist: 'The Weeknd',
       audio: [
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false }
+        { id: v4(), name: 'Blinding Lights', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2022/10/The-Weeknd-Blinding-Lights-via-Naijafinix.com_.mp3?_=1', active: false },
+        { id: v4(), name: 'Starboy Ft. Daft Punk', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2022/06/The-Weeknd-Starboy-ft.-Daft-Punk-via-Naijafinix.com_.mp3?_=1', active: false },
+        { id: v4(), name: 'Die For You', song: 'https://naijafinix.com/wp-content/uploads/2021/04/The-Weeknd-Die-For-You-via-Naijafinix.com_.mp3?_=1', active: false },
+        { id: v4(), name: 'Heartless', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2022/10/The-Weeknd-Heartless-via-Naijafinix.com_.mp3?_=1', active: false },
+        { id: v4(), name: 'Call Out My Name', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2021/04/The-Weeknd-Call-Out-My-Name-via-Naijafinix.com_.mp3?_=1', active: false }
       ],
       color: '#135389',
       id: v4(),
@@ -72,11 +71,11 @@ function chillHop () {
       cover: Schoolboyq,
       artist: 'Schoolboy q',
       audio: [
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false },
-        { id: v4(), name: '', song: 'https://mp3.chillhop.com/serve.php/?mp3=41956', active: false }
+        { id: v4(), name: 'Hell Of A Night', song: 'http://sharehub.link/fmymp3//Schoolboy_Q_-_Hell_Of_A_Night_-_07_13452.mp3', active: false },
+        { id: v4(), name: 'Man Of The Year', song: 'https://24naijamusicfiles.com/wp-content/uploads/2020/11/SchoolBoy_Q_-_Man_Of_The_Year.mp3', active: false },
+        { id: v4(), name: 'Soccer Dad', song: 'https://www.basenaija.com/wp-content/uploads/2022/04/ScHoolboy_Q_-_Soccer_Dad_@BaseNaija.com.mp3', active: false },
+        { id: v4(), name: 'Collard Greens', song: 'https://24naijamusicfiles.com/wp-content/uploads/2020/11/SchoolBoy_Q_Ft_Kendrick_Lamar_-_Collard_Greens.mp3', active: false },
+        { id: v4(), name: 'Drunk Ft. 6LACK', song: 'https://talkglitz.media/wp-content/uploads/2019/04/ScHoolboy_Q_-_Drunk_ft_6LACK_Official_Audio__talkglitz.tv.mp3', active: false }
       ],
       color: '#6d6d6d',
       id: v4(),

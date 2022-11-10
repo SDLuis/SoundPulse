@@ -3,11 +3,16 @@ export default function UsePlayer ({
   audioRef,
   setCurrentSong,
   songs,
+  setSongs,
   activeLibraryHandler,
   setIsPlaying,
   currentSong,
   songInfo,
-  isPlaying
+  isPlaying,
+  artists,
+  singleArtist,
+  setSingleArtist,
+  setIndex
 }) {
   const playSongHandler = () => {
     if (isPlaying) {
@@ -32,11 +37,30 @@ export default function UsePlayer ({
       currentTime: e.target.value
     })
   }
+  const skipArtistHandler = async (direction) => {
+    const currentIndex = artists.findIndex((artist) => artist.id === singleArtist.id)
+    if (direction === 'skip-forward') {
+      await setSingleArtist(artists[(currentIndex + 1) % artists.length])
+      await setSongs(singleArtist.audio)
+      setIndex((currentIndex + 1) % artists.length)
+    }
+    if (direction === 'skip-back') {
+      if ((currentIndex - 1) % artists.length === -1) {
+        await setSingleArtist(artists[artists.length - 1])
+        await setSongs(singleArtist.audio)
+        setIndex(artists.length - 1)
+        return
+      }
+      await setSingleArtist(artists[(currentIndex - 1) % artists.length])
+      await setSongs(singleArtist.audio)
+      setIndex((currentIndex - 1) % artists.length)
+    }
+    if (isPlaying) setIsPlaying(!isPlaying)
+  }
 
   const skipTrackHandler = async (direction) => {
     const currentIndex = songs.findIndex((song) => song.id === currentSong.id)
     if (direction === 'skip-forward') {
-      console.log(songs[(currentIndex + 1) % songs.length])
       await setCurrentSong(songs[(currentIndex + 1) % songs.length])
       activeLibraryHandler(songs[(currentIndex + 1) % songs.length])
     }
@@ -62,6 +86,7 @@ export default function UsePlayer ({
     skipTrackHandler,
     dragHandler,
     getTime,
-    playSongHandler
+    playSongHandler,
+    skipArtistHandler
   }
 }

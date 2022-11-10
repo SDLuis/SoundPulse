@@ -10,13 +10,19 @@ export default function Navbar ({
   audioRef,
   setCurrentSong,
   songs,
-  artist,
+  singleArtist,
+  setSingleArtist,
   setIndex,
   activeLibraryHandler,
   timeUpdateHandler,
-  songEndHandler
+  songEndHandler,
+  artists,
+  getTime,
+  dragHandler,
+  trackAnimation,
+  skipTrackHandler,
+  playSongHandler
 }) {
-  // console.log(currentSong)
   return (
     <header className='w-full pl-1 md:pl-8 xl:pl-16 h-30 md:h-20 md:flex items-center'>
       <div className='flex w-full md:w-[40%] lg:w-[50%] justify-around'>
@@ -27,17 +33,16 @@ export default function Navbar ({
       </div>
       <div className='mt-3 w-full md:w-[60%] ml-auto'>
         <h1><Music
+          getTime={getTime}
+          dragHandler={dragHandler}
+          trackAnimation={trackAnimation}
+          skipTrackHandler={skipTrackHandler}
+          playSongHandler={playSongHandler}
           currentSong={currentSong}
           isPlaying={isPlaying}
-          setIsPlaying={setIsPlaying}
           songInfo={songInfo}
-          setSongInfo={setSongInfo}
           audioRef={audioRef}
-          activeLibraryHandler={activeLibraryHandler}
-          songs={songs}
-          setCurrentSong={setCurrentSong}
-          artist={artist}
-          setIndex={setIndex}
+          singleArtist={singleArtist}
             />
         </h1>
         <audio
