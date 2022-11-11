@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 export default function UsePlayer ({
   setSongInfo,
   audioRef,
@@ -14,6 +16,7 @@ export default function UsePlayer ({
   setSingleArtist,
   setIndex
 }) {
+  const [isMuted, setIsMuted] = useState(true)
   const playSongHandler = () => {
     if (isPlaying) {
       audioRef.current.pause()
@@ -21,6 +24,16 @@ export default function UsePlayer ({
     } else {
       audioRef.current.play()
       setIsPlaying(!isPlaying)
+    }
+  }
+
+  const mutedSongHandler = () => {
+    if (isMuted) {
+      audioRef.current.muted = true
+      setIsMuted(!isMuted)
+    } else {
+      audioRef.current.muted = false
+      setIsMuted(!isMuted)
     }
   }
 
@@ -91,6 +104,8 @@ export default function UsePlayer ({
     dragHandler,
     getTime,
     playSongHandler,
-    skipArtistHandler
+    skipArtistHandler,
+    mutedSongHandler,
+    isMuted
   }
 }

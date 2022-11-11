@@ -1,4 +1,4 @@
-import { Pause, Play, Left, Right, Volume, Menu } from './icons'
+import { Pause, Play, Left, Right, Volume, Muted, Menu } from './icons'
 import Library from './library'
 export default function Music ({
   currentSong,
@@ -15,10 +15,12 @@ export default function Music ({
   songs,
   setSongs,
   setCurrentSong,
-  audioRef
+  audioRef,
+  mutedSongHandler,
+  isMuted
 }) {
   return (
-    <div style={{ borderRightColor: singleArtist.color }} className='relative h-[90%] text-gray-200 bg-black/10 w-full border-r-8 flex items-center'>
+    <div style={{ borderRightColor: singleArtist.color }} className='relative h-[90%] delay-75 text-gray-200 bg-black/50 w-full border-r-8 flex items-center'>
       <img className='w-10 h-12 object-cover mr-2' src={singleArtist.cover} />
       <div className='flex sm:gap-2 gap-1 items-center pr-3'>
         <div className='flex sm:p-2'>
@@ -36,8 +38,19 @@ export default function Music ({
         <p className='xl:ml-2 lg:ml-[-7px]'>{getTime(songInfo.currentTime)} </p>
 
         <div className='lg:block flex items-center md:hidden lg:top-[25%] absolute right-2 h-full gap-1 xl:gap-2'>
-          <button> <Volume /> </button>
-          <button onClick={() => setShowPlaylist(!showPlaylist)}> <Menu /> </button>
+          <div className='flex gap-3 items-center'>
+            <button onClick={mutedSongHandler}>{isMuted ? <Volume /> : <Muted />} </button>
+            <button>
+              <input type='checkbox' id='menu' hidden className='peer ' />
+              <label
+                onClick={() => setShowPlaylist(!showPlaylist)}
+                htmlFor='menu'
+                className='relative hover:cursor-pointer z-50 peer-checked:[&>.first]:hidden peer-checked:[&>.last]:block text-blue-800'
+              >
+                <Menu />
+              </label>
+            </button>
+          </div>
         </div>
       </div>
       <div className='absolute bottom-[-4px] left-0 w-full'>

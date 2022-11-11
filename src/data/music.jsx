@@ -3,6 +3,11 @@ import Kendrick from '../img/Kendirck Lamar.webp'
 import TheWeeknd from '../img/The weeknd.jpg'
 import Lana from '../img/Lana del rey.jpg'
 import Schoolboyq from '../img/schoolboy q.jpg'
+import lana from '../img/lana.webp'
+import rihanna from '../img/purple.webp'
+import weekend from '../img/weekend.webp'
+import kendrick from '../img/c4b930154647947.6346ffbda5d34.webp'
+import schoolboy from '../img/black.webp'
 
 const v4 = () => {
   const head = Date.now().toString(36)
@@ -14,6 +19,7 @@ function Music () {
     {
       cover: Lana,
       artist: 'Lana Del Rey',
+      bg: lana,
       audio: [
         { id: v4(), name: 'Born To Die', song: 'https://naijafinix.com/wp-content/uploads/2022/09/Lana-Del-Rey-Born-To-Die-via-Naijafinix.com_.mp3?_=1', active: false },
         { id: v4(), name: 'Off To The Races', song: 'https://naijafinix.com/wp-content/uploads/2022/09/Lana-Del-Rey-Off-To-The-Races-via-Naijafinix.com_.mp3?_=1', active: false },
@@ -28,6 +34,7 @@ function Music () {
     {
       cover: Kendrick,
       artist: 'Kendrick Lamar',
+      bg: kendrick,
       audio: [
         { id: v4(), name: 'N95', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2022/06/Kendrick-Lamar-N95-via-Naijafinix.com_.mp3?_=1', active: false },
         { id: v4(), name: 'All The Stars Ft SZA', song: 'https://naijafinix.com/wp-content/uploads/2021/05/Kendrick-Lamar-SZA-All-The-Stars-via-Naijafinix.com_.mp3?_=1', active: false },
@@ -42,6 +49,7 @@ function Music () {
     {
       cover: Rihanna,
       artist: 'Rihanna',
+      bg: rihanna,
       audio: [
         { id: v4(), name: 'Diamonds', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2020/08/Rihanna-Diamonds-via-Naijafinix.com_.mp3?_=1', active: false },
         { id: v4(), name: 'Good Girl Gone Bad', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2021/08/Rihanna-Good-Girl-Gone-Bad-via-Naijafinix.com_.mp3?_=1', active: false },
@@ -56,6 +64,7 @@ function Music () {
     {
       cover: TheWeeknd,
       artist: 'The Weeknd',
+      bg: weekend,
       audio: [
         { id: v4(), name: 'Blinding Lights', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2022/10/The-Weeknd-Blinding-Lights-via-Naijafinix.com_.mp3?_=1', active: false },
         { id: v4(), name: 'Starboy Ft. Daft Punk', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2022/06/The-Weeknd-Starboy-ft.-Daft-Punk-via-Naijafinix.com_.mp3?_=1', active: false },
@@ -70,6 +79,7 @@ function Music () {
     {
       cover: Schoolboyq,
       artist: 'Schoolboy q',
+      bg: schoolboy,
       audio: [
         { id: v4(), name: 'Hell Of A Night', song: 'http://sharehub.link/fmymp3//Schoolboy_Q_-_Hell_Of_A_Night_-_07_13452.mp3', active: false },
         { id: v4(), name: 'Man Of The Year', song: 'https://24naijamusicfiles.com/wp-content/uploads/2020/11/SchoolBoy_Q_-_Man_Of_The_Year.mp3', active: false },

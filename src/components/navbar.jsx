@@ -5,25 +5,21 @@ import { useState } from 'react'
 export default function Navbar ({
   currentSong,
   isPlaying,
-  setIsPlaying,
   songInfo,
-  setSongInfo,
   audioRef,
   setCurrentSong,
   songs,
   singleArtist,
-  setSingleArtist,
-  setIndex,
-  activeLibraryHandler,
   timeUpdateHandler,
   songEndHandler,
-  artists,
   getTime,
   dragHandler,
   trackAnimation,
   skipTrackHandler,
   playSongHandler,
-  setSongs
+  setSongs,
+  mutedSongHandler,
+  isMuted
 }) {
   const [showPlaylist, setShowPlaylist] = useState(false)
 
@@ -52,6 +48,8 @@ export default function Navbar ({
           setCurrentSong={setCurrentSong}
           setSongs={setSongs}
           songs={songs}
+          mutedSongHandler={mutedSongHandler}
+          isMuted={isMuted}
             />
         </h1>
         <audio

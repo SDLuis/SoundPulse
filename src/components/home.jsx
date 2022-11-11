@@ -30,7 +30,9 @@ export default function Home () {
     dragHandler,
     trackAnimation,
     skipTrackHandler,
-    playSongHandler
+    playSongHandler,
+    mutedSongHandler,
+    isMuted
   } = UsePlayer({
     setSongInfo,
     audioRef,
@@ -49,7 +51,7 @@ export default function Home () {
   })
 
   return (
-    <div>
+    <div style={{ backgroundImage: `url(${singleArtist.bg})` }} className='h-screen transform-cpu transition-all delay-75 duration-500 ease-in-out bg-cover'>
       <Navbar
         getTime={getTime}
         skipTrackHandler={skipTrackHandler}
@@ -73,11 +75,13 @@ export default function Home () {
         artists={artists}
         setArtists={setArtists}
         setIndex={setIndex}
+        mutedSongHandler={mutedSongHandler}
+        isMuted={isMuted}
       />
 
       <div className='h-[80vh] w-[99vw] flex items-center justify-between'>
-        <button className='px-8 py-3 bg-transparent hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-back')}> <BigLeft color={singleArtist.color} /> </button>
-        <button className='px-8 py-3 bg-transparent hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-forward')}> <BigRight color={singleArtist.color} /> </button>
+        <button className='bg-transparent hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-back')}> <BigLeft color={singleArtist.color} /> </button>
+        <button className='bg-transparent hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-forward')}> <BigRight color={singleArtist.color} /> </button>
       </div>
     </div>
   )
