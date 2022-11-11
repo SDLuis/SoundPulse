@@ -9,7 +9,7 @@ const v4 = () => {
   const tail = Math.random().toString(36).substr(2)
   return head + tail
 }
-function chillHop () {
+function Music () {
   return [
     {
       cover: Lana,
@@ -43,8 +43,8 @@ function chillHop () {
       cover: Rihanna,
       artist: 'Rihanna',
       audio: [
-        { id: v4(), name: 'Good Girl Gone Bad', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2021/08/Rihanna-Good-Girl-Gone-Bad-via-Naijafinix.com_.mp3?_=1', active: false },
         { id: v4(), name: 'Diamonds', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2020/08/Rihanna-Diamonds-via-Naijafinix.com_.mp3?_=1', active: false },
+        { id: v4(), name: 'Good Girl Gone Bad', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2021/08/Rihanna-Good-Girl-Gone-Bad-via-Naijafinix.com_.mp3?_=1', active: false },
         { id: v4(), name: 'SOS', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2020/08/Rihanna-SOS-via-Naijafinix.com_.mp3?_=1', active: false },
         { id: v4(), name: 'Lift Me Up', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2022/11/Rihanna-Lift-Me-Up-From-Black-Panther-Wakanda-Forever-via-Naijafinix.com_.mp3?_=1', active: false },
         { id: v4(), name: 'Man Down', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2020/08/Rihanna-Man-Down-via-Naijafinix.com_.mp3?_=1', active: false }
@@ -84,4 +84,4 @@ function chillHop () {
   ]
 }
 
-export default chillHop
+export default Music

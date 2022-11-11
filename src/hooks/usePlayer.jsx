@@ -43,17 +43,21 @@ export default function UsePlayer ({
       await setSingleArtist(artists[(currentIndex + 1) % artists.length])
       await setSongs(singleArtist.audio)
       setIndex((currentIndex + 1) % artists.length)
+      activeLibraryHandler(songs[(currentIndex + 1) % songs.length])
     }
     if (direction === 'skip-back') {
       if ((currentIndex - 1) % artists.length === -1) {
         await setSingleArtist(artists[artists.length - 1])
         await setSongs(singleArtist.audio)
         setIndex(artists.length - 1)
+        activeLibraryHandler(songs[songs.length - 1])
+        if (isPlaying) setIsPlaying(!isPlaying)
         return
       }
       await setSingleArtist(artists[(currentIndex - 1) % artists.length])
       await setSongs(singleArtist.audio)
       setIndex((currentIndex - 1) % artists.length)
+      activeLibraryHandler(songs[(currentIndex - 1) % songs.length])
     }
     if (isPlaying) setIsPlaying(!isPlaying)
   }

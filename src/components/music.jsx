@@ -1,5 +1,5 @@
 import { Pause, Play, Left, Right, Volume, Menu } from './icons'
-
+import Library from './library'
 export default function Music ({
   currentSong,
   isPlaying,
@@ -9,10 +9,16 @@ export default function Music ({
   dragHandler,
   trackAnimation,
   skipTrackHandler,
-  playSongHandler
+  playSongHandler,
+  showPlaylist,
+  setShowPlaylist,
+  songs,
+  setSongs,
+  setCurrentSong,
+  audioRef
 }) {
   return (
-    <div style={{ borderRightColor: singleArtist.color }} className='relative h-[90%] text-gray-200 bg-black w-full border-r-8 flex items-center'>
+    <div style={{ borderRightColor: singleArtist.color }} className='relative h-[90%] text-gray-200 bg-black/10 w-full border-r-8 flex items-center'>
       <img className='w-10 h-12 object-cover mr-2' src={singleArtist.cover} />
       <div className='flex sm:gap-2 gap-1 items-center pr-3'>
         <div className='flex sm:p-2'>
@@ -31,7 +37,7 @@ export default function Music ({
 
         <div className='lg:block flex items-center md:hidden lg:top-[25%] absolute right-2 h-full gap-1 xl:gap-2'>
           <button> <Volume /> </button>
-          <button> <Menu /> </button>
+          <button onClick={() => setShowPlaylist(!showPlaylist)}> <Menu /> </button>
         </div>
       </div>
       <div className='absolute bottom-[-4px] left-0 w-full'>
@@ -52,10 +58,19 @@ export default function Music ({
           </label>
           <div
             style={trackAnimation}
-            className='animate-track bg-black absolute left-0 top-0 w-full h-[500%] pointer-events-none translate-x-[0%]'
+            className='animate-track bg-black absolute left-0 top-0 w-full h-full pointer-events-none translate-x-[0%]'
           />
         </div>
       </div>
+      <Library
+        songs={songs}
+        singleArtist={singleArtist}
+        showPlaylist={showPlaylist}
+        setSongs={setSongs}
+        setCurrentSong={setCurrentSong}
+        audioRef={audioRef}
+        isPlaying={isPlaying}
+      />
     </div>
   )
 }
