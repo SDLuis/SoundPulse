@@ -22,7 +22,7 @@ const LibrarySong = ({
     <div
       onClick={selectSongHandler}
       className={`library-song flex items-center mt-1 cursor-pointer ${
-        song.active ? 'border-1 bg-black/40' : ''
+        song.active ? 'border-1 bg-black/80' : ''
       }`}
     >
       <img className='w-10 h-12 object-cover' src={artist.cover} alt='Song Cover' />
