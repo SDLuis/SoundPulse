@@ -81,7 +81,7 @@ function Music () {
       artist: 'Schoolboy q',
       bg: schoolboy,
       audio: [
-        { id: v4(), name: 'Hell Of A Night', song: 'http://sharehub.link/fmymp3//Schoolboy_Q_-_Hell_Of_A_Night_-_07_13452.mp3', active: false },
+        { id: v4(), name: 'Hell Of A Night', song: 'https://mgamma.123tokyo.xyz/get.php/d/2c/lBm9_pRj2UA.mp3?cid=MTQ4LjAuMjUwLjI0M3xNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTA3LjAuMC4wIFNhZmFyaS81MzcuMzYgRWRnLzEwNy4wLjE0MTguMzV8RE8%3D&h=c0uKH6GrBBxIWp1PpFM0NQ&s=1668210009&n=ScHoolboy%20Q%20-%20Hell%20Of%20A%20Night&dom=Iframe', active: false },
         { id: v4(), name: 'Man Of The Year', song: 'https://24naijamusicfiles.com/wp-content/uploads/2020/11/SchoolBoy_Q_-_Man_Of_The_Year.mp3', active: false },
         { id: v4(), name: 'Soccer Dad', song: 'https://www.basenaija.com/wp-content/uploads/2022/04/ScHoolboy_Q_-_Soccer_Dad_@BaseNaija.com.mp3', active: false },
         { id: v4(), name: 'Collard Greens', song: 'https://24naijamusicfiles.com/wp-content/uploads/2020/11/SchoolBoy_Q_Ft_Kendrick_Lamar_-_Collard_Greens.mp3', active: false },
