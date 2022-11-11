@@ -51,7 +51,7 @@ export default function Home () {
   })
 
   return (
-    <div style={{ backgroundImage: `url(${singleArtist.bg})` }} className='h-screen transform-cpu transition-all delay-75 duration-500 ease-in-out bg-cover'>
+    <div style={{ backgroundImage: `url(${singleArtist.bg})` }} className='h-screen transform-cpu transition-all delay-150 duration-500 ease-in-out bg-cover'>
       <Navbar
         getTime={getTime}
         skipTrackHandler={skipTrackHandler}
