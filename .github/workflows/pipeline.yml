@@ -33,7 +33,7 @@ jobs:
         run: npm run lint
 
   build:
-    needs: [lint]
+    needs: [lint, avoid_reduncy ]
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
