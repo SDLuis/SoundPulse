@@ -1,5 +1,4 @@
-import React from 'react'
-import LibrarySong from './LibrarySong'
+import LibrarySong from './librarySong'
 
 const Library = ({
   songs,
