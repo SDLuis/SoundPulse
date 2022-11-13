@@ -24,9 +24,9 @@ export default function Music ({
       <img className='w-10 h-12 object-cover mr-2' src={singleArtist.cover} />
       <div className='flex sm:gap-2 gap-1 items-center pr-3'>
         <div className='flex sm:p-2'>
-          <button onClick={() => skipTrackHandler('skip-back')}> <Left /> </button>
-          <button onClick={playSongHandler}>{isPlaying ? <Pause /> : <Play />}</button>
-          <button onClick={() => skipTrackHandler('skip-forward')}> <Right /></button>
+          <button className='focus:outline-none' onClick={() => skipTrackHandler('skip-back')}> <Left /> </button>
+          <button className='focus:outline-none' onClick={playSongHandler}>{isPlaying ? <Pause /> : <Play />}</button>
+          <button className='focus:outline-none' onClick={() => skipTrackHandler('skip-forward')}> <Right /></button>
         </div>
         <div className='mx-1 sm:flex items-center text-gray-200 w-[180px] sm:w-[300px] md:w-[250px] xl:w-[350px] lg:w-[325px]'>
           <div className='flex w-[90%]'>

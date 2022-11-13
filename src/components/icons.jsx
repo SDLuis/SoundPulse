@@ -52,8 +52,8 @@ export const Menu = () => {
 }
 
 export const BigLeft = ({ color }) => {
-  return <svg version='1.0' xmlns='http://www.w3.org/2000/svg' className='focus:outline-none' width='133.333' fill={color} height='133.333' viewBox='0 0 100 100'><path d='M44 33.5 27.5 50 44 66.5c13 13.1 16.7 16.2 17.8 15.3 1.1-.9-1.7-4.2-14-16.5L32.5 50l15.4-15.4C61.3 21.1 64.5 17 61.2 17c-.4 0-8.1 7.4-17.2 16.5z' /></svg>
+  return <svg version='1.0' xmlns='http://www.w3.org/2000/svg' className='focus:outline-none' width='100' fill={color} height='133.333' viewBox='0 0 100 100'><path d='M44 33.5 27.5 50 44 66.5c13 13.1 16.7 16.2 17.8 15.3 1.1-.9-1.7-4.2-14-16.5L32.5 50l15.4-15.4C61.3 21.1 64.5 17 61.2 17c-.4 0-8.1 7.4-17.2 16.5z' /></svg>
 }
 export const BigRight = ({ color }) => {
-  return <svg version='1.0' xmlns='http://www.w3.org/2000/svg' className='focus:outline-none' width='133.333' fill={color} height='133.333' viewBox='0 0 100 100'><path d='M37.4 18.1c-.4.7 5.8 7.6 14.7 16.5L67.5 50 52.2 65.3c-12.3 12.3-15.1 15.6-14 16.5 1.1.9 4.8-2.2 17.8-15.3L72.5 50 56 33.5C46.9 24.4 39.2 17 38.8 17c-.4 0-1 .5-1.4 1.1z' /></svg>
+  return <svg version='1.0' xmlns='http://www.w3.org/2000/svg' className='focus:outline-none' width='100' fill={color} height='133.333' viewBox='0 0 100 100'><path d='M37.4 18.1c-.4.7 5.8 7.6 14.7 16.5L67.5 50 52.2 65.3c-12.3 12.3-15.1 15.6-14 16.5 1.1.9 4.8-2.2 17.8-15.3L72.5 50 56 33.5C46.9 24.4 39.2 17 38.8 17c-.4 0-1 .5-1.4 1.1z' /></svg>
 }

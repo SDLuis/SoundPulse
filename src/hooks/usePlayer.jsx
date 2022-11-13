@@ -17,6 +17,10 @@ export default function UsePlayer ({
   setIndex
 }) {
   const [isMuted, setIsMuted] = useState(true)
+  const [page, setPage] = useState('home')
+  const audios = []
+  artists.map((artist) => audios.push(artist))
+
   const playSongHandler = () => {
     if (isPlaying) {
       audioRef.current.pause()
@@ -106,6 +110,9 @@ export default function UsePlayer ({
     playSongHandler,
     skipArtistHandler,
     mutedSongHandler,
-    isMuted
+    isMuted,
+    page,
+    setPage,
+    audios
   }
 }

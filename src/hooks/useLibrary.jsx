@@ -5,7 +5,9 @@ export default function UseLibrary ({
   setCurrentSong,
   audioRef,
   isPlaying,
-  id
+  id,
+  setSingleArtist,
+  artist
 }) {
   const selectSongHandler = async () => {
     await setCurrentSong(song)
@@ -24,6 +26,7 @@ export default function UseLibrary ({
         }
       }
     })
+    setSingleArtist(artist)
     setSongs(newSong)
 
     // Check if the song is Playing

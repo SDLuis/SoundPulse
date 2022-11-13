@@ -1,8 +1,11 @@
+/* eslint-disable react/jsx-closing-tag-location */
 import Navbar from './navbar'
 import UseSongHandler from '../hooks/useSongHandler'
 import '../styles/global.css'
 import UsePlayer from '../hooks/usePlayer'
 import { BigLeft, BigRight } from '../components/icons'
+import Info from './info'
+import PagePlaylist from './pagePlaylist'
 
 export default function Home () {
   const {
@@ -32,7 +35,10 @@ export default function Home () {
     skipTrackHandler,
     playSongHandler,
     mutedSongHandler,
-    isMuted
+    isMuted,
+    page,
+    setPage,
+    audios
   } = UsePlayer({
     setSongInfo,
     audioRef,
@@ -49,9 +55,8 @@ export default function Home () {
     setSingleArtist,
     setIndex
   })
-
   return (
-    <div style={{ backgroundImage: `url(${singleArtist.bg})` }} className='h-screen transform-cpu transition-all delay-200 duration-500 ease-in-out bg-cover'>
+    <div style={{ backgroundImage: `url(${singleArtist.bg})` }} className='h-screen transform-cpu transition-all delay-200 duration-500 ease-in-out bg-center bg-cover bg-no-repeat'>
       <Navbar
         getTime={getTime}
         skipTrackHandler={skipTrackHandler}
@@ -77,11 +82,31 @@ export default function Home () {
         setIndex={setIndex}
         mutedSongHandler={mutedSongHandler}
         isMuted={isMuted}
+        page={page}
+        setPage={setPage}
       />
-
-      <div className='h-[80vh] w-[99vw] flex items-center justify-between'>
-        <button className='bg-transparent hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-back')}> <BigLeft color={singleArtist.color} /> </button>
-        <button className='bg-transparent hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-forward')}> <BigRight color={singleArtist.color} /> </button>
+      <div>
+        {
+          page === 'home'
+            ? <div>
+              <Info singleArtist={singleArtist} />
+            </div>
+            : <div className='text-white grid place-items-center h-[80vh] font-bold'>
+              <PagePlaylist
+                audios={audios}
+                songs={songs}
+                singleArtist={singleArtist}
+                setSongs={setSongs}
+                setCurrentSong={setCurrentSong}
+                audioRef={audioRef}
+                isPlaying={isPlaying}
+                setSingleArtist={setSingleArtist}
+              /></div>
+          }
+        <div>
+          <button className='bg-transparent fixed left-0 md:left-2 top-[50%] z-10 focus:outline-none hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-back')}> <BigLeft color='white' /> </button>
+          <button className='bg-transparent fixed right-0 md:right-2 top-[50%] z-10 focus:outline-none hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-forward')}> <BigRight color='white' /> </button>
+        </div>
       </div>
     </div>
   )
