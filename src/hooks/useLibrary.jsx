@@ -11,7 +11,28 @@ export default function UseLibrary ({
 }) {
   const selectSongHandler = async () => {
     await setCurrentSong(song)
+    // Add Active State
+    const newSong = songs.map((song) => {
+      if (song.id === id) {
+        return {
+          ...song,
+          active: true
+        }
+      } else {
+        return {
+          ...song,
+          active: false
+        }
+      }
+    })
+    setSongs(newSong)
 
+    // Check if the song is Playing
+    if (isPlaying) audioRef.current.play()
+  }
+
+  const selectSongArtistHandler = async () => {
+    await setCurrentSong(song)
     // Add Active State
     const newSong = songs.map((song) => {
       if (song.id === id) {
@@ -33,5 +54,5 @@ export default function UseLibrary ({
     if (isPlaying) audioRef.current.play()
   }
 
-  return { selectSongHandler }
+  return { selectSongHandler, selectSongArtistHandler }
 }

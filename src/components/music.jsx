@@ -21,12 +21,12 @@ export default function Music ({
 }) {
   return (
     <div style={{ borderRightColor: singleArtist.color }} className='relative h-[90%] delay-75 text-gray-200 bg-black/50 w-full border-r-8 flex items-center'>
-      <img className='w-10 h-12 object-cover mr-2' src={singleArtist.cover} />
+      <img className='w-10 h-12 object-cover mr-2' src={singleArtist.cover} alt={singleArtist.artist} />
       <div className='flex sm:gap-2 gap-1 items-center pr-3'>
         <div className='flex sm:p-2'>
-          <button className='focus:outline-none' onClick={() => skipTrackHandler('skip-back')}> <Left /> </button>
-          <button className='focus:outline-none' onClick={playSongHandler}>{isPlaying ? <Pause /> : <Play />}</button>
-          <button className='focus:outline-none' onClick={() => skipTrackHandler('skip-forward')}> <Right /></button>
+          <span className='focus:outline-none' onClick={() => skipTrackHandler('skip-back')}> <Left /> </span>
+          <span className='focus:outline-none' onClick={playSongHandler}>{isPlaying ? <Pause /> : <Play />}</span>
+          <span className='focus:outline-none' onClick={() => skipTrackHandler('skip-forward')}> <Right /></span>
         </div>
         <div className='mx-1 sm:flex items-center text-gray-200 w-[180px] sm:w-[300px] md:w-[250px] xl:w-[350px] lg:w-[325px]'>
           <div className='flex w-[90%]'>

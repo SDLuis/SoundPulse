@@ -11,7 +11,7 @@ export default function Playlist ({
   artist,
   setSingleArtist
 }) {
-  const { selectSongHandler } = UseLibrary({
+  const { selectSongArtistHandler } = UseLibrary({
     song,
     setSongs,
     songs,
@@ -24,7 +24,7 @@ export default function Playlist ({
   })
   return (
     <div
-      onClick={selectSongHandler}
+      onClick={selectSongArtistHandler}
       className='library-song flex w-[15rem] md:w-[30vw] items-center mt-1 cursor-pointer'
     >
       <img className='w-10 h-12 object-cover' src={artist.cover} alt='Song Cover' />

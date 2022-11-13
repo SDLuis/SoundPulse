@@ -55,38 +55,43 @@ export default function Home () {
     setSingleArtist,
     setIndex
   })
+  const css =
+  `@media (max-width: 767px) {.backimage { background-image: url(${singleArtist.smallbg}) }}   
+   @media (min-width: 768px) {.backimage { background-image: url(${singleArtist.bg}) }}`
   return (
-    <div style={{ backgroundImage: `url(${singleArtist.bg})` }} className='h-screen transform-cpu transition-all delay-200 duration-500 ease-in-out bg-center bg-cover bg-no-repeat'>
-      <Navbar
-        getTime={getTime}
-        skipTrackHandler={skipTrackHandler}
-        dragHandler={dragHandler}
-        trackAnimation={trackAnimation}
-        playSongHandler={playSongHandler}
-        currentSong={currentSong}
-        isPlaying={isPlaying}
-        setIsPlaying={setIsPlaying}
-        songInfo={songInfo}
-        setSongInfo={setSongInfo}
-        audioRef={audioRef}
-        songs={songs}
-        setSongs={setSongs}
-        singleArtist={singleArtist}
-        setSingleArtist={setSingleArtist}
-        activeLibraryHandler={activeLibraryHandler}
-        setCurrentSong={setCurrentSong}
-        timeUpdateHandler={timeUpdateHandler}
-        songEndHandler={songEndHandler}
-        artists={artists}
-        setArtists={setArtists}
-        setIndex={setIndex}
-        mutedSongHandler={mutedSongHandler}
-        isMuted={isMuted}
-        page={page}
-        setPage={setPage}
-      />
-      <div>
-        {
+    <div>
+      <style scoped>{css}</style>
+      <div className='h-screen backimage transform-cpu transition-all delay-200 duration-500 ease-in-out bg-center bg-cover bg-no-repeat'>
+        <Navbar
+          getTime={getTime}
+          skipTrackHandler={skipTrackHandler}
+          dragHandler={dragHandler}
+          trackAnimation={trackAnimation}
+          playSongHandler={playSongHandler}
+          currentSong={currentSong}
+          isPlaying={isPlaying}
+          setIsPlaying={setIsPlaying}
+          songInfo={songInfo}
+          setSongInfo={setSongInfo}
+          audioRef={audioRef}
+          songs={songs}
+          setSongs={setSongs}
+          singleArtist={singleArtist}
+          setSingleArtist={setSingleArtist}
+          activeLibraryHandler={activeLibraryHandler}
+          setCurrentSong={setCurrentSong}
+          timeUpdateHandler={timeUpdateHandler}
+          songEndHandler={songEndHandler}
+          artists={artists}
+          setArtists={setArtists}
+          setIndex={setIndex}
+          mutedSongHandler={mutedSongHandler}
+          isMuted={isMuted}
+          page={page}
+          setPage={setPage}
+        />
+        <div>
+          {
           page === 'home'
             ? <div>
               <Info singleArtist={singleArtist} />
@@ -103,9 +108,10 @@ export default function Home () {
                 setSingleArtist={setSingleArtist}
               /></div>
           }
-        <div>
-          <button className='bg-transparent fixed left-0 md:left-2 top-[50%] z-10 focus:outline-none hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-back')}> <BigLeft color='white' /> </button>
-          <button className='bg-transparent fixed right-0 md:right-2 top-[50%] z-10 focus:outline-none hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-forward')}> <BigRight color='white' /> </button>
+          <div>
+            <span className='bg-transparent fixed left-0 md:left-2 top-[50%] z-10 focus:outline-none hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-back')}> <BigLeft color='white' /> </span>
+            <span className='bg-transparent fixed right-0 md:right-2 top-[50%] z-10 focus:outline-none hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-forward')}> <BigRight color='white' /> </span>
+          </div>
         </div>
       </div>
     </div>

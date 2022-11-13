@@ -29,9 +29,9 @@ export default function Navbar ({
     <header className='w-full pl-1 md:pl-8 xl:pl-16 h-30 md:h-20 md:flex items-center'>
       <div className='flex w-full md:w-[40%] lg:w-[50%] justify-around'>
         <a href='/'><img className='w-[80px] mt-4 md:w-[120px] h-auto' src={Logo} alt='Logo' /><p className='text-transparent fixed'>.</p></a>
-        <a onClick={() => setPage('home')} className={` ${page === 'home' ? 'text-white' : 'text-gray-200'} text-lg mt-5 font-normal cursor-pointer hover:text-white`}> Home </a>
-        <a onClick={() => setPage('playlist')} className={` ${page === 'playlist' ? 'text-white' : 'text-gray-200'} text-lg mt-5 font-normal cursor-pointer hover:text-white`}> Playlist </a>
-        <a className='text-lg mt-5 text-gray-200 font-normal cursor-pointer hover:text-white'> Upload </a>
+        <p onClick={() => setPage('home')} className={` ${page === 'home' ? 'text-white' : 'text-gray-200'} text-lg mt-5 font-normal cursor-pointer hover:text-white`}> Home </p>
+        <p onClick={() => setPage('playlist')} className={` ${page === 'playlist' ? 'text-white' : 'text-gray-200'} text-lg mt-5 font-normal cursor-pointer hover:text-white`}> Playlist </p>
+        <p className='text-lg mt-5 text-gray-200 font-normal cursor-pointer hover:text-white'> Upload </p>
       </div>
       <div className='mt-3 w-full md:w-[60%] ml-auto'>
         <h1><Music

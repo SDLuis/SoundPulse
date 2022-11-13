@@ -7,7 +7,8 @@ const LibrarySong = ({
   audioRef,
   isPlaying,
   id,
-  artist
+  artist,
+  setSingleArtist
 }) => {
   const { selectSongHandler } = UseLibrary({
     song,
@@ -25,10 +26,10 @@ const LibrarySong = ({
         song.active ? 'border-1 bg-black/80' : ''
       }`}
     >
-      <img className='w-10 h-12 object-cover' src={artist.cover} alt='Song Cover' />
+      <img className='object-cover' width='40px' height='48px' src={artist.cover} alt='Song Cover' />
       <div className='song-description pl-4'>
-        <h3 className='text-sm'>{song.name}</h3>
-        <h4 className='text-xs'>{artist.artist}</h4>
+        <p className='text-sm'>{song.name}</p>
+        <p className='text-xs'>{artist.artist}</p>
       </div>
     </div>
   )

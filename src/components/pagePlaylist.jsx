@@ -4,7 +4,7 @@ import Album from './album'
 export default function PagePlaylist ({ audios, setSongs, songs, setCurrentSong, audioRef, isPlaying, setSingleArtist }) {
   return (
     <div className='bg-black/70 w-[90vw] md:w-[70vw] grid grid-cols-2 gap-5 rounded-md'>
-      <div className='grid grid-cols-1 h-[55vh] overflow-y-auto'>
+      <div className='grid grid-cols-1 scrollbarDark h-[55vh] overflow-y-auto'>
         {audios.map((artist) => artist.audio.map((audio) => (
           <Playlist
             key={audio.id}
