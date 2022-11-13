@@ -109,8 +109,8 @@ export default function Home () {
               /></div>
           }
           <div>
-            <span className='bg-transparent fixed left-0 md:left-2 top-[50%] z-10 focus:outline-none hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-back')}> <BigLeft color='white' /> </span>
-            <span className='bg-transparent fixed right-0 md:right-2 top-[50%] z-10 focus:outline-none hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-forward')}> <BigRight color='white' /> </span>
+            <span className='bg-transparent cursor-pointer fixed left-0 md:left-2 top-[50%] z-10 focus:outline-none hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-back')}> <BigLeft color='white' /> </span>
+            <span className='bg-transparent cursor-pointer fixed right-0 md:right-2 top-[50%] z-10 focus:outline-none hover:scale-[1.1] transition-all duration-100 ease-in-out' onClick={() => skipArtistHandler('skip-forward')}> <BigRight color='white' /> </span>
           </div>
         </div>
       </div>

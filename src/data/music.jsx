@@ -33,7 +33,7 @@ function Music () {
         { id: v4(), release: '2012', name: 'Ride', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2022/02/Lana-Del-Rey-Ride-via-Naijafinix.com_.mp3?_=1', active: false },
         { id: v4(), release: '2012', name: 'Summertime Sadness', song: 'https://www.naijafinix.com.ng/wp-content/uploads/2022/02/Lana-Del-Rey-Summertime-Sadness-via-Naijafinix.com_.mp3?_=1', active: false }
       ],
-      color: '#8c9492',
+      color: '#905f67',
       id: v4(),
       active: true
     },
