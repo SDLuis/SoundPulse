@@ -26,7 +26,7 @@ const LibrarySong = ({
         song.active ? 'border-1 bg-black/80' : ''
       }`}
     >
-      <img className='object-cover' width='40px' height='48px' src={artist.cover} alt='Song Cover' />
+      <img className='object-cover w-10 h-12' src={artist.cover} alt='Song Cover' />
       <div className='song-description pl-4'>
         <p className='text-sm'>{song.name}</p>
         <p className='text-xs'>{artist.artist}</p>

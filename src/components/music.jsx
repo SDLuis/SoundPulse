@@ -35,12 +35,12 @@ export default function Music ({
           </div>
           <p className='w-full sm:ml-[-8px] inline-flex'>{currentSong.name}</p>
         </div>
-        <p className='xl:ml-2 lg:ml-[-7px]'>{getTime(songInfo.currentTime)} </p>
+        <p className='xl:ml-2 lg:ml-[-7px] ml-1'>{getTime(songInfo.currentTime)} </p>
 
         <div className='lg:block flex items-center md:hidden lg:top-[25%] absolute right-2 h-full gap-1 xl:gap-2'>
           <div className='flex gap-3 items-center'>
-            <button onClick={mutedSongHandler}>{isMuted ? <Volume /> : <Muted />} </button>
-            <button>
+            <span onClick={mutedSongHandler}>{isMuted ? <Volume /> : <Muted />} </span>
+            <span>
               <input type='checkbox' id='menu' hidden className='peer ' />
               <label
                 onClick={() => setShowPlaylist(!showPlaylist)}
@@ -49,7 +49,7 @@ export default function Music ({
               >
                 <Menu />
               </label>
-            </button>
+            </span>
           </div>
         </div>
       </div>

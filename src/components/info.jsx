@@ -7,8 +7,8 @@ export default function Info ({ singleArtist }) {
         <p className='font-extrabold uppercase text-5xl md:text-8xl'>{singleArtist.artist}</p>
         <div className='grid mt-4 ml-1 grid-cols-3'>
           <div className='max-w-[6rem] md:max-w-[7rem]'><p className='text-xl font-medium'>{singleArtist.audio[1].name}</p><p className='font-thin'>{singleArtist.audio[1].release}</p></div>
-          <div className='max-w-[6rem] md:max-w-[7rem]'><p className='text-xl'>{singleArtist.audio[2].name}</p><p>{singleArtist.audio[2].release}</p></div>
-          <div className='max-w-[6rem] md:max-w-[7rem]'><p className='text-xl'>{singleArtist.audio[3].name}</p><p>{singleArtist.audio[3].release}</p></div>
+          <div className='max-w-[6rem] md:max-w-[7rem]'><p className='text-xl font-medium'>{singleArtist.audio[2].name}</p><p className='font-thin'>{singleArtist.audio[2].release}</p></div>
+          <div className='max-w-[6rem] md:max-w-[7rem]'><p className='text-xl font-medium'>{singleArtist.audio[3].name}</p><p className='font-thin'>{singleArtist.audio[3].release}</p></div>
         </div>
       </div>
     </div>
